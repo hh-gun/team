@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
     
     steps:
@@ -45,7 +45,7 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/team:latest
         
   deploy:
-    needs: build-and-deploy
+    needs: build-and-EC@
     runs-on: ubuntu-latest
 
     steps:
