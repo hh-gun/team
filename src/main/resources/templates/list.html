@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Team</title>
+	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK" />
+</head>
+<body>
+	<!-- list.html -->
+	<h1>팀프로젝트 <small>설명</small></h1>
+	
+	<table>
+		<tr>
+			<td>번호</td>
+			<td>이름</td>
+			<td>설명</td>
+		</tr>
+		<tr th:each="entity : ${list}">
+			<td th:text=${entity.seq}></td>
+			<td th:text=${entity.name}></td>
+			<td th:text=${entity.description}></td>
+		</tr>
+	</table>
+	
+</body>
+</html>
