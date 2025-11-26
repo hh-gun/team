@@ -44,8 +44,8 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/team:latest
         
-  deploy:
-    needs: build-and-EC@
+  deploy-to-ec2:
+    needs: build-and-push
     runs-on: ubuntu-latest
 
     steps:
